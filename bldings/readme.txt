@@ -1,0 +1,1 @@
+these are my attempts at building the sdl-nugem engine with several corrections.
