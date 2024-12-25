@@ -85,7 +85,7 @@ Sffv1::Sffv1(const char * filename, const char * paletteFile): m_filename(filena
 
 Sffv1::~Sffv1()
 {
-    for (int i = 0; i < m_sffv1Container.size(); i++)
+    for (size_t i = 0; i < m_sffv1Container.size(); i++)
         delete [] m_sffv1Container[i].data;
 }
 
@@ -105,13 +105,13 @@ void Sffv1::loadSffFile()
     if (version[3] > 1)
         throw version;
     // Number of groups
-    m_ngroups = read_uint32(charfile);
-    m_nimages = read_uint32(charfile);
-    uint32_t nextSubfileOffset = read_uint32(charfile);
-    uint32_t subheaderSize = read_uint32(charfile);
-    uint8_t sharedPaletteByte;
-    charfile >> sharedPaletteByte;
-    m_sharedPalette = (sharedPaletteByte != 0);
+   m_ngroups = read_uint32(charfile);
+   m_nimages = read_uint32(charfile);
+   uint32_t nextSubfileOffset = read_uint32(charfile);
+   uint32_t subheaderSize = read_uint32(charfile);
+   uint8_t sharedPaletteByte;
+   charfile >> sharedPaletteByte;
+   m_sharedPalette = (sharedPaletteByte != 0);
     // Reading the subfiles
     while (charfile.good() && ((int) nextSubfileOffset) > 0 && m_sffv1Container.size() < m_nimages) {
         SpriteInfo sprite;

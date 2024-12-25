@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  *  along with Nugem.  If not, see <http://www.gnu.org/licenses/>.
 */
-
+#include <array>
 #ifndef GLGRAPHICS_H
 #define GLGRAPHICS_H
 

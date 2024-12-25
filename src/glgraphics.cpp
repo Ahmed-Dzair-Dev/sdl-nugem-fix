@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  *  along with Nugem.  If not, see <http://www.gnu.org/licenses/>.
 */
-
+#include <array>
 #include "glgraphics.hpp"
 
 #include <iostream>
@@ -212,13 +212,18 @@ void GlGraphics::initialize(Game * game)
 		glUseProgram(m_shaderProgram);
 	}
 
-    m_positionVertAttrib = glGetAttribLocation(m_shaderProgram, "position");
-    if (m_positionVertAttrib == -1)
+        m_positionVertAttrib = glGetAttribLocation(m_shaderProgram, "position");
+    if (m_positionVertAttrib == static_cast<GLuint>(-1)) {
+        m_positionVertAttrib = 0;
         std::cerr << "Could not bind position attrib" << std::endl;
+    }
+
 
     m_texCoordsAttrib = glGetAttribLocation(m_shaderProgram, "v_texCoords");
-    if (m_texCoordsAttrib == -1)
+    if (m_texCoordsAttrib == static_cast<GLuint>(-1)) {
+        m_texCoordsAttrib = 0;
         std::cerr << "Could not bind tex coords attrib" << std::endl;
+    }
 
     m_uniformMvp = glGetUniformLocation(m_shaderProgram, "mvp");
     if (m_uniformMvp == -1)

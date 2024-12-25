@@ -56,7 +56,7 @@ void CharacterCommands::readFile(const std::string & filepath)
 std::vector<std::unique_ptr<CharacterCommands::CommandInput>> CharacterCommands::readInputDefinition(const std::string& entryString)
 {
 	std::vector<std::unique_ptr<CharacterCommands::CommandInput>> result;
-	for (int index = 0; index < entryString.size(); index++)
+	for (size_t index = 0; index < entryString.size(); index++)
 	{
 		char ch = entryString[index];
 		bool isDirection = false;

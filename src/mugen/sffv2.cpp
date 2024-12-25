@@ -279,7 +279,7 @@ void Sffv2::Drawer::draw(uint32_t * pixelData, size_t width, size_t height)
                     // If the length is greater than the offset, then the copy pointer must go back to the beginning of the source when it reaches the full length
                     // According to the Nomen developper
                     // So that is why the offset has a factor here
-                    for (int i_pixel = 0; i_pixel < copylength && indexPixel < surfaceSize; i_pixel++, indexPixel++) {
+                    for (uint32_t i_pixel = 0; i_pixel < copylength && indexPixel < surfaceSize; i_pixel++, indexPixel++) {
                         uint32_t offsetFromBeginning;
                         if (offset)
                             offsetFromBeginning = offset * (1 + i_pixel / offset);
