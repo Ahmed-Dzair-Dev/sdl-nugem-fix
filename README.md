@@ -1,4 +1,4 @@
-![alt text](https://ibb.co/h8hgRqW)
+![alt text](https://i.ibb.co/GPBdvh2/20241226-083543.png)
 
 # Nugem
 
