@@ -2,7 +2,7 @@
 
 # NUGEM
 
-**nugem** is a 2D fighting game engine reimplementing M.U.G.E.N. using SDL2 and OpenGL aiming for compatibility with [Mugen](https://en.wikipedia.org/wiki/Mugen_(game_engine)).
+**nugem** is a 2D fighting game engine reimplementing M.U.G.E.N. using SDL2 and OpenGL aiming for compatibility with [ Mugen Engine ](https://en.wikipedia.org/wiki/Mugen_(game_engine)).
 
 ## Prequirements
 * g++ 14+
